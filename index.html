@@ -36,7 +36,7 @@
   <header>
     <div class="brand">椰子找博主 / CreatorBridge</div>
     <h1>隐私政策</h1>
-    <p class="meta">更新及生效日期：2026 年 10 月 12 日</p>
+    <p class="meta">更新及生效日期：2026 年 10 月 13 日</p>
     <p>本政策适用于“椰子找博主”Chrome 扩展程序（原名称 CreatorBridge）及其后端服务 creatorbridge.meixuanai.cn，说明我们如何处理与查找小红书、抖音相似博主以及 Instagram 推荐方向浏览有关的数据。</p>
   </header>
   <div class="summary">插件通过读取博主页面中已加载的信息生成关键词，按您确认的关键词搜索，并帮助您逐个筛选和收藏博主。无需注册邮箱或手机号；系统使用匿名身份区分不同用户的数据。匿名身份仍是可关联的用户标识，并不代表完全不处理用户数据。</div>
@@ -73,8 +73,7 @@
           <tr><td>阿里云（后端托管）</td><td>承载插件后端，处理身份验证请求、页面分析输入、关键词、项目和收藏请求，以及必要的运行、安全记录。当前后端部署在中国大陆。</td></tr>
           <tr><td>Supabase（身份与数据库）</td><td>处理匿名身份、会话验证及项目、收藏数据，提供身份恢复和按用户隔离的云端存储。</td></tr>
           <tr><td>阿里云百炼 / 通义千问（AI）</td><td>接收所选平台、博主简介、已加载的作品标题或文案，以及最多 8 张作品封面，用于结合图文生成相关关键词。当前发送前会去除简介中的可识别网址和邮箱，但不保证原文中的所有个人信息都被去除。匿名会话凭据、项目及收藏列表不会作为关键词分析提示发送。</td></tr>
-          <tr><td>RedFox（redfox.hk，当前搜索服务）</td><td>接收搜索关键词、分页及必要搜索参数，返回小红书或抖音作品与作者信息。不会为此发送您的匿名会话凭据或收藏列表。</td></tr>
-          <tr><td>EveryInfra（api.everyinfra.com，备用搜索服务）</td><td>仅在启用该数据源时接收搜索关键词及必要搜索参数，用于返回搜索结果；当前小红书和抖音搜索使用 RedFox。</td></tr>
+          <tr><td>EveryInfra（api.everyinfra.com，搜索服务）</td><td>接收搜索关键词、分页及必要搜索参数，返回小红书或抖音作品、作品链接与作者信息。不会为此发送您的匿名会话凭据或收藏列表。</td></tr>
           <tr><td>小红书、抖音及其图片服务</td><td>当您打开或预加载主页、作品或头像图片时，对应平台接收正常网页或图片请求，并按其自身政策处理网络请求信息和平台登录状态。</td></tr>
         </tbody>
       </table>
@@ -92,7 +91,7 @@
     <ul>
       <li><strong>浏览器本地：</strong>匿名会话和项目选择等保存在扩展本地存储；搜索及筛选临时状态保存在扩展会话存储。清除扩展数据、卸载或浏览器会话结束可能分别清除这些状态。</li>
       <li><strong>云端身份、项目和收藏：</strong>保留以支持后续使用，直至您删除相关收藏、提出并完成数据删除请求，或服务停止后不再需要保留。当前没有自动按固定天数删除所有项目的机制。</li>
-      <li><strong>运行记录：</strong>额度明细定期清理超过 32 天的记录；精简错误诊断保留最近 7 天且最多 10,000 条；后台管理操作审计定期清理超过 90 天的记录。定时清理可能存在执行间隔。当前生产服务不生成包含完整搜索请求、响应的逐次查询日志。</li>
+      <li><strong>运行记录：</strong>额度明细定期清理超过 32 天的记录；不含用户标识的服务累计用量汇总持续保留，不随明细清理而减少。精简错误诊断保留最近 7 天且最多 10,000 条；后台管理操作审计定期清理超过 90 天的记录。定时清理可能存在执行间隔。当前生产服务不生成包含完整搜索请求、响应的逐次查询日志。</li>
       <li><strong>基础设施日志及备份：</strong>按相应服务的轮转、备份和安全保留机制处理，不与在线业务数据同步即时删除；依法或为安全事件必须保留的数据将在必要期限内保留并限制使用。</li>
     </ul>
   </section>
@@ -115,7 +114,7 @@
     <p>运营方：<strong>汪非凡</strong><br>隐私与数据请求邮箱：<a href="mailto:wangfeifan@iftech.io">wangfeifan@iftech.io</a></p>
     <p>来信请注明“椰子找博主隐私请求”和希望处理的事项。我们会在必要范围内确认您的身份及请求，避免将数据提供给无权访问的人。</p>
   </section>
-  <footer lang="en"><strong>Privacy summary for reviewers.</strong> 椰子找博主 (CreatorBridge) reads loaded Xiaohongshu / Douyin creator profile text and post captions to suggest search keywords. Relevant text is processed by Alibaba Cloud Qwen; confirmed search terms are sent to RedFox (or EveryInfra when enabled). Supabase stores anonymous authentication, projects and saved creators. Alibaba Cloud hosts the backend. The extension stores session credentials and workflow state locally. Data is not sold or used for advertising or credit decisions. Users may remove saved creators in the extension or contact the operator above for data requests. This public page requires no login and uses no analytics scripts or cookies.</footer>
+  <footer lang="en"><strong>Privacy summary for reviewers.</strong> 椰子找博主 (CreatorBridge) reads loaded Xiaohongshu / Douyin creator profile text and post captions to suggest search keywords. Relevant text is processed by Alibaba Cloud Qwen; confirmed search terms for both platforms are sent to EveryInfra. Supabase stores anonymous authentication, projects and saved creators. Alibaba Cloud hosts the backend. The extension stores session credentials and workflow state locally. Data is not sold or used for advertising or credit decisions. Users may remove saved creators in the extension or contact the operator above for data requests. This public page requires no login and uses no analytics scripts or cookies.</footer>
 </main>
 </body>
 </html>
