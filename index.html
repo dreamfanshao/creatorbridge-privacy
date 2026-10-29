@@ -36,7 +36,7 @@
   <header>
     <div class="brand">椰子博主 / CreatorBridge</div>
     <h1>隐私政策</h1>
-    <p class="meta">更新及生效日期：2026 年 10 月 19 日</p>
+    <p class="meta">更新及生效日期：2026 年 10 月 28 日</p>
     <p>本政策适用于“椰子博主”Microsoft Edge 扩展程序及同功能的 Chrome 版本（原名称“椰子找博主”、CreatorBridge）及其后端服务 creatorbridge.meixuanai.cn，说明我们如何处理与查找小红书、抖音相似博主以及 Instagram 推荐方向浏览有关的数据。</p>
   </header>
   <div class="summary">插件通过读取博主页面中已加载的信息生成关键词，按您确认的关键词搜索，并帮助您逐个筛选和收藏博主。无需注册邮箱或手机号；系统使用匿名身份区分不同用户的数据。匿名身份仍是可关联的用户标识，并不代表完全不处理用户数据。</div>
@@ -48,11 +48,12 @@
     <p><strong>网站访问范围：</strong>0.8.12 起的普通商店发布包仅申请小红书、抖音网站及本插件后端的访问权限，页面识别和辅助脚本仅在支持的平台运行，不读取其他网站的正文。</p>
     <ul>
       <li><strong>当前博主和作品信息：</strong>在支持的平台页面识别博主，读取已加载的昵称、平台用户标识、主页或作品链接、头像链接、简介、作品标题或视频文案、已加载的作品封面链接，以及页面可取得的粉丝数、点赞数等信息。用于展示当前博主、生成关键词和筛选搜索结果。视频分析依据已加载的文字信息，不下载视频进行音视频识别。</li>
-      <li><strong>关键词和操作数据：</strong>您确认或手动输入的关键词、搜索平台及页数，用于向搜索服务查询作品并整理作者结果；项目名称、收藏的博主信息及收藏时间用于项目管理；跳过状态、搜索结果和筛选进度用于恢复当前操作。</li>
+      <li><strong>关键词和操作数据：</strong>您确认或手动输入的关键词、搜索平台及页数，用于向搜索服务查询作品并整理作者结果；项目名称、收藏的博主信息及收藏时间用于项目管理；NO（不感兴趣）记录按匿名身份和项目存入云端，用于排除已跳过的博主；原本保存在本浏览器的 NO 会上传到对应项目。搜索结果和筛选进度用于恢复当前操作。</li>
+      <li><strong>历史合作导入：</strong>您主动粘贴的博主主页或分享链接用于建立本浏览器的项目去重名单。需要解析的短链接和作品链接发送到后端，再由后端访问对应平台的公开页面以确认作者；名单在扩展本地保存，可在导入管理中移除。</li>
       <li><strong>匿名身份及会话：</strong>系统创建匿名用户 ID，并在扩展本地存储中保存访问令牌、刷新令牌等会话凭据，用于再次打开插件时恢复身份、验证请求，以及隔离不同用户的项目与收藏。</li>
       <li><strong>必要的运行记录：</strong>后端记录关联匿名 ID 的调用时间、次数、额度、请求标识、错误码、状态码和耗时，用于额度控制、防止滥用和故障排查。服务器及基础设施也可能在访问、安全日志中记录 IP 地址、请求路径、时间、浏览器信息和响应状态。</li>
       <li><strong>每日活跃人数：</strong>在插件功能请求通过身份验证后，后端保存北京时间日期及匿名身份 ID 的哈希摘要，用于统计每天使用服务的人数；同一身份当天只计一次，不在此统计中保存请求正文。</li>
-      <li><strong>免费次数与微信解锁：</strong>后端按匿名 ID 记录已使用的免费次数，以及您输入的解锁码、兑换时间和解锁状态。解锁码由我们生成，您可自愿添加客服微信获取。插件不读取您的微信账号或好友信息，服务端不保存您的微信号。</li>
+      <li><strong>免费次数与微信解锁：</strong>后端按匿名 ID 记录已使用的免费次数，以及您输入的解锁码、兑换时间、解锁状态及精准模式剩余次数。解锁码由我们生成，您可自愿添加客服微信获取。插件不读取您的微信账号或好友信息，服务端不保存您的微信号。</li>
     </ul>
     <p>页面识别和登录提示关闭脚本在受支持的平台页面运行；当您使用关键词生成功能时，相关页面信息会发送到本插件后端；确认开始搜索后，关键词才会发送给搜索服务。筛选时可能预加载下一位博主页面，因此会向对应平台发送正常的页面请求。</p>
     <p>我们不读取您的小红书、抖音账号密码或登录 Cookie，不收集私信，不使用浏览器历史记录 API 获取完整浏览记录。页面简介或标题本身可能包含博主公开的个人信息，请勿在手动输入内容中添加密码、身份证号等与搜索无关的敏感信息。</p>
@@ -72,10 +73,10 @@
       <table>
         <thead><tr><th scope="col">服务商</th><th scope="col">处理的数据与目的</th></tr></thead>
         <tbody>
-          <tr><td>阿里云（后端托管）</td><td>承载插件后端，处理身份验证请求、页面分析输入、关键词、项目和收藏请求，以及必要的运行、安全记录。当前后端部署在中国大陆。</td></tr>
-          <tr><td>Supabase（身份与数据库）</td><td>处理匿名身份、会话验证及项目、收藏数据，提供身份恢复和按用户隔离的云端存储。</td></tr>
+          <tr><td>阿里云（后端托管）</td><td>承载插件后端，处理身份验证请求、页面分析输入、关键词、项目、收藏、NO 记录和历史链接解析请求，以及必要的运行、安全记录。当前后端部署在中国大陆。</td></tr>
+          <tr><td>Supabase（身份与数据库）</td><td>处理匿名身份、会话验证及项目、收藏和 NO 记录，提供身份恢复和按用户隔离的云端存储。</td></tr>
           <tr><td>阿里云百炼 / 通义千问（AI）</td><td>接收所选平台、博主简介、已加载的作品标题或文案，以及最多 8 张作品封面，用于结合图文生成相关关键词。当前发送前会去除简介中的可识别网址和邮箱，但不保证原文中的所有个人信息都被去除。匿名会话凭据、项目及收藏列表不会作为关键词分析提示发送。</td></tr>
-          <tr><td>EveryInfra（api.everyinfra.com，搜索服务）</td><td>接收搜索关键词、分页及必要搜索参数，返回小红书或抖音作品、作品链接与作者信息。不会为此发送您的匿名会话凭据或收藏列表。</td></tr>
+          <tr><td>EveryInfra（api.everyinfra.com，搜索服务）</td><td>接收搜索关键词、分页及必要搜索参数，返回小红书或抖音作品、作品链接与作者信息。抖音精准模式还会传入候选作者标识，获取其作品信息以计算筛选指标。不会为此发送您的匿名会话凭据或收藏列表。</td></tr>
           <tr><td>小红书、抖音及其图片服务</td><td>当您打开或预加载主页、作品或头像图片时，对应平台接收正常网页或图片请求，并按其自身政策处理网络请求信息和平台登录状态。</td></tr>
         </tbody>
       </table>
@@ -86,13 +87,13 @@
     <h2>三、使用范围与保护措施</h2>
     <p>我们仅将上述数据用于查找相似博主、项目与收藏管理、您主动开启的 Instagram 推荐方向浏览，以及这些功能必要的安全、额度和可靠性维护。我们不出售用户数据，不用于个性化广告、信用评估或贷款，不用于与插件单一用途无关的用户画像。</p>
     <p>Microsoft Edge 版本依据 Microsoft Edge Add-ons 开发者政策处理用户数据；Chrome 版本依据 Chrome Web Store 用户数据政策及 Limited Use（有限使用）要求处理用户数据。两种浏览器版本均仅为明确说明的用户功能处理必要数据。除提供功能所必需的服务商处理外，仅在履行法律义务、处理安全或滥用事件等允许的情况下披露必要数据。工作人员仅在获得您对特定支持请求的授权、安全调查或法律要求等必要情形下访问相关数据。</p>
-    <p>云端项目与收藏通过经验证的匿名身份和数据库访问规则隔离；后台管理设置需要管理员验证。我们采取合理措施保护数据，但任何网络传输和存储都不能保证绝对安全。</p>
+    <p>云端项目、收藏与 NO 记录通过经验证的匿名身份和数据库访问规则隔离；后台管理设置需要管理员验证。我们采取合理措施保护数据，但任何网络传输和存储都不能保证绝对安全。</p>
   </section>
   <section id="retention">
     <h2>四、存储位置与保留期限</h2>
     <ul>
-      <li><strong>浏览器本地：</strong>匿名会话和项目选择等保存在扩展本地存储；搜索及筛选临时状态保存在扩展会话存储。清除扩展数据、卸载或浏览器会话结束可能分别清除这些状态。</li>
-      <li><strong>云端身份、项目和收藏：</strong>保留以支持后续使用，直至您删除相关收藏、提出并完成数据删除请求，或服务停止后不再需要保留。当前没有自动按固定天数删除所有项目的机制。</li>
+      <li><strong>浏览器本地：</strong>匿名会话、项目选择及历史合作去重名单等保存在扩展本地存储；搜索及筛选临时状态保存在扩展会话存储。清除扩展数据、卸载或浏览器会话结束可能分别清除这些状态。</li>
+      <li><strong>云端身份、项目、收藏和 NO 记录：</strong>保留以支持后续使用，直至您删除相关收藏、撤销对应 NO、提出并完成数据删除请求，或服务停止后不再需要保留。当前没有自动按固定天数删除所有项目的机制。</li>
       <li><strong>运行记录：</strong>额度明细定期清理超过 32 天的记录；不含用户标识的服务累计用量汇总持续保留，不随明细清理而减少。精简错误诊断保留最近 7 天且最多 10,000 条；后台管理操作审计定期清理超过 90 天的记录。定时清理可能存在执行间隔。当前生产服务不生成包含完整搜索请求、响应的逐次查询日志。</li>
       <li><strong>日活统计：</strong>日期与匿名身份 ID 哈希摘要持续保留，以支持历史日活查询与去重；可通过下方联系方式申请删除相关数据。</li>
       <li><strong>免费次数与解锁状态：</strong>与匿名 ID 一并保留，不随 32 天明细清理而删除，以保证次数限制和解锁长期有效；可按第五节申请删除。</li>
@@ -103,7 +104,7 @@
     <h2>五、您的选择与数据删除</h2>
     <ul>
       <li>您可在搜索前修改、取消勾选或删除关键词，并决定搜索页数。</li>
-      <li>您可在“稍后再看”中取消收藏或清空当前项目的收藏。</li>
+      <li>您可在“已收藏”中取消收藏或清空当前项目的收藏，在结果列表撤销 NO，并在导入管理中移除历史合作去重名单。</li>
       <li>您可通过浏览器扩展管理页关闭网站访问权限、停用或卸载插件，以停止后续页面读取。</li>
       <li>如需查询、更正、导出或删除云端身份、项目及其他相关数据，请通过下方邮箱联系。我们会核实请求与匿名身份的关联，并在核实后处理适用请求。</li>
     </ul>
@@ -118,7 +119,7 @@
     <p>运营方：<strong>汪非凡</strong><br>隐私与数据请求邮箱：<a href="mailto:wangfeifan@iftech.io">wangfeifan@iftech.io</a></p>
     <p>来信请注明“椰子博主隐私请求”和希望处理的事项。我们会在必要范围内确认您的身份及请求，避免将数据提供给无权访问的人。</p>
   </section>
-  <footer lang="en"><strong>Privacy summary for reviewers.</strong> 椰子博主 (CreatorBridge) reads loaded Xiaohongshu / Douyin creator profile text and post captions to suggest search keywords. Relevant text is processed by Alibaba Cloud Qwen; confirmed search terms for both platforms are sent to EveryInfra. Supabase stores anonymous authentication, projects and saved creators. Alibaba Cloud hosts the backend. The extension stores session credentials and workflow state locally. Data is not sold or used for advertising or credit decisions. Users may remove saved creators in the extension or contact the operator above for data requests. This public page requires no login and uses no analytics scripts or cookies.</footer>
+  <footer lang="en"><strong>Privacy summary for reviewers.</strong> 椰子博主 (CreatorBridge) reads loaded Xiaohongshu / Douyin creator profile text and post captions to suggest search keywords. Relevant text is processed by Alibaba Cloud Qwen; confirmed search terms for both platforms are sent to EveryInfra. Supabase stores anonymous authentication, projects, saved creators and rejected (NO) creators. Existing local NO records migrate to the corresponding cloud project. Imported collaboration lists remain local; links requiring author lookup are sent to the backend and the relevant platform. Douyin precise mode sends candidate author identifiers to EveryInfra to retrieve works for filtering. Alibaba Cloud hosts the backend. The extension stores session credentials and workflow state locally. Data is not sold or used for advertising or credit decisions. Users may remove saved creators in the extension or contact the operator above for data requests. This public page requires no login and uses no analytics scripts or cookies.</footer>
 </main>
 </body>
 </html>
